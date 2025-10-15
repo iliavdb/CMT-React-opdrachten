@@ -1,5 +1,6 @@
 import { useState } from 'react' ;
 import Book from './book';
+import BookCounter from './BookCounter'
 
 
 const Booklist = () => {
@@ -20,9 +21,15 @@ const Booklist = () => {
             author: 'Suzanne Collins',
             img: './images/book-3.png'
         },
+        {
+            title: 'the hunger games',
+            author: 'suzanne collins',
+            img: './images.book-3.png'
+        }
     ]);
     return ( 
         <section className='container'>
+            <BookCounter aantal={books.length}/>
             {books.map((book) => (
                 <Book
                 title={book.title}
