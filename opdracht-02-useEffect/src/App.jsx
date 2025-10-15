@@ -1,6 +1,6 @@
 import './App.css'
-import Clock from './assets/components/Clock'
-import WelcomeMessage from './assets/components/WelcomeMessage'
+import Clock from './components/Clock'
+import WelcomeMessage from './components/WelcomeMessage'
 
 function App() {
 
