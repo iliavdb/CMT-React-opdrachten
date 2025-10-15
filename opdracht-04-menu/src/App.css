@@ -40,3 +40,85 @@
 .read-the-docs {
   color: #888;
 }
+/* === Algemene styling === */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f3f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Hoofdcontainer === */
+.menu-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 40px 60px;
+}
+
+/* === Elk gerecht === */
+.menu-container section {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #f9fcff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-container section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* === Afbeeldingen === */
+.menu-container img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* === Tekstgedeelte === */
+.menu-container h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.menu-container h3 {
+  font-size: 0.95rem;
+  color: #e3b04b;
+  font-weight: 600;
+  margin: 0;
+}
+
+.menu-container h4 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #777;
+  margin: 2px 0 8px;
+}
+
+/* === Tekst en prijs in één regel === */
+.menu-container .menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === Omschrijving === */
+.menu-container p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+  max-width: 90%;
+}

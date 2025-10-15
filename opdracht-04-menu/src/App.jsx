@@ -1,10 +1,11 @@
 import './App.css'
+import Menulist from './components/menulist'
 
 function App() {
 
   return (
     <>
-      <h1>Opdracht 4 - Menu</h1>
+    <Menulist/>
     </>
   )
 }
