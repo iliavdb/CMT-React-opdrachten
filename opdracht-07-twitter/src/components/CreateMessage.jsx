@@ -9,7 +9,7 @@ const CreateMessage = ({message, setMessage, textInput, setTextInput}) => {
     const subitMessageHandler = (e) => {
     e.preventDefault();
 
-    setMessage(...message, textInput)
+    setMessage([...message, textInput])
     setTextInput('');
     }
     return (

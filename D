@@ -1,0 +1,77 @@
+App.js:
+import { useState } from 'react';
+import './App.css'
+import CreateMessage  from './components/createmessage'
+import MessageList from './components/MessageList'
+
+function App() {
+  const [textInput, setTextInput] = useState('');
+    const [message, setMessage] = useState([]);
+let name = 'ilia';
+
+  return (
+    <>
+      <CreateMessage message={message} setMessage={setMessage} textInput={textInput} setTextInput={setTextInput}/>
+      <MessageList name={name} message={message}/>
+    </>
+  )
+}
+
+export default App
+
+CreateMessage.jsx:
+
+
+const CreateMessage = ({message, setMessage, textInput, setTextInput}) => {
+    
+    const userInputHandler = (e) => {
+        setTextInput(e.target.value);
+
+    }
+    const subitMessageHandler = (e) => {
+    e.preventDefault();
+
+    setMessage(...message, textInput)
+    setTextInput('');
+    }
+    return (
+      <form>
+          <textarea value={textInput} cols="50" rows="5" onChange={userInputHandler}></textarea>
+      <button onClick={subitMessageHandler}>Toevoegen</button>
+      </form> 
+     );
+}
+ 
+export default CreateMessage;
+
+Message.jsx:
+
+const Message = ({name, message}) => {
+    return ( 
+       <> 
+       <h2>{name}</h2>
+       <p>{message}</p>
+
+       </>
+     );
+}
+ 
+export default Message;
+
+MessageList.jsx:
+import Message from "./Message";
+
+const MessageList = ({name, message}) => {
+  console.log(message)
+    return ( 
+        <>
+    
+        <Message name={name} message={message} />
+
+      
+    
+      </>
+     );
+}
+ 
+export default MessageList;
