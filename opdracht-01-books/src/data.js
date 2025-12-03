@@ -2,24 +2,22 @@ const books = [
         {
             title: 'Harry Potter',
             author: 'J.K Rowling',
-            img: './images/book-1.png'
+            img: './images/book-1.png',
+            category: 'Science-Fiction'
             
         },
         {
             title: 'Fantasia VI',
             author: 'Geronimo Stilton',
-            img: './images/book-2.png'
+            img: './images/book-2.png',
+            category: 'Fantasy'
         },
         {
             title: 'The Hunger Games',
             author: 'Suzanne Collins',
-            img: './images/book-3.png'
+            img: './images/book-3.png',
+            category: 'Action'
         },
-        {
-            title: 'the hunger games',
-            author: 'suzanne collins',
-            img: './images.book-3.png'
-        }
     ];
 
 export default books;
