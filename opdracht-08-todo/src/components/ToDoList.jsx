@@ -1,8 +1,8 @@
-import TodoItem from "./TodoItem";
+import TodoItem from "./ToDoItem";
 
 function TodoList({ items }) {
   return (
-    <ul>
+    <ul className="mt-10">
       {items.map((todo, index) => (
         <TodoItem key={index} text={todo} />
       ))}
