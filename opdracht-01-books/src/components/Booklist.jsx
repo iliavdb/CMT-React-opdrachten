@@ -57,6 +57,9 @@ const Booklist = () => {
                         author={book.author}
                         img={book.img}
                         category={book.category}
+                        description={book.description}
+                        year={book.year}
+                        pages={book.pages}
                     />
                 ))}
 
