@@ -6,12 +6,23 @@ const Book = ({title, img, author, category}) => {
             setAantalKeerGelezen(aantalKeerGelezen + 1);
         }
 
+        const [liked, setLiked] = useState(false);
+        function toggleLike() {
+            setLiked(!liked)
+        }
+        
+
     return (  
         <section className="book">   
             <h2>{title}</h2>
             <img src={img} alt={title} />
             <h3>{author}</h3>
             <p>{category}</p>
+            <div className='favorite-section'>
+                <button onClick={toggleLike}>
+                    {liked ? '❤️' : '🤍'}
+                </button>
+            </div>
            
             <button onClick={verhoogTeller}>
         Keer gelezen: {aantalKeerGelezen}
